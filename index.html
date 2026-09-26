@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encuentra al Dueño · Asesor Peterson</title>
+<meta name="description" content="Guía práctica para saber quién es el dueño de una propiedad en Chile (ROL, SII, CBR), comprar seguro en Viña del Mar y Concón, y evaluar oportunidades. Por Peterson Laguerre, Asesor Peterson.">
+<meta property="og:title" content="Cómo encontrar al dueño de una propiedad y comprar seguro">
+<meta property="og:description" content="ROL, SII, Conservador de Bienes Raíces, checklist de compra segura y calculadoras. Asesoría en Viña del Mar y Concón.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#262262">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23262262'/%3E%3Cpath d='M20 46V18h13a9 9 0 010 18h-7v10z' fill='none' stroke='%230580FF' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --azul:#0580FF; --profundo:#262262; --negro:#000; --blanco:#fff; --neutro:#F4F7FB;
+  --texto:#14143a; --suave:#51527a; --linea:#dde3ee; --ok:#0580FF;
+  --r:16px; --sombra:0 6px 24px rgba(38,34,98,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Montserrat,system-ui,sans-serif;background:var(--neutro);color:var(--texto);line-height:1.55;font-size:16px;padding-bottom:84px}
+a{color:var(--azul)}
+h1,h2,h3{line-height:1.15;color:var(--profundo)}
+h1{font-weight:800;font-size:clamp(28px,6vw,48px);letter-spacing:-.02em;color:#fff}
+h2{font-weight:800;font-size:clamp(22px,4.2vw,32px);letter-spacing:-.01em;margin-bottom:8px}
+h3{font-weight:700;font-size:18px;margin-bottom:6px}
+p{color:var(--suave)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px;border-radius:6px}
+
+/* Header */
+.top{background:var(--profundo);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;color:#fff;text-decoration:none}
+.logo b{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--azul);font-size:18px}
+.logo small{display:block;font-weight:500;font-size:11px;opacity:.75;letter-spacing:.04em}
+.top .mini{font-size:13px;font-weight:600;color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:999px;white-space:nowrap}
+
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--profundo) 0%,#1c1a55 55%,#0b3f99 100%);color:#fff;padding:36px 0 56px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(5,128,255,.45),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#bcd9ff;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:#6db3ff}
+.hero p.lead{color:#dfe8ff;font-size:17px;max-width:620px;margin:14px 0 24px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;padding:14px 20px;border-radius:12px;border:0;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-azul{background:var(--azul);color:#fff;box-shadow:0 8px 20px rgba(5,128,255,.35)}
+.btn-blanco{background:#fff;color:var(--profundo)}
+.btn-linea{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-prof{background:var(--profundo);color:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;font-size:13px;color:#cfe0ff}
+.trust span b{color:#fff;font-weight:800;font-size:16px;margin-right:4px}
+
+/* Tabs */
+.tabs{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--linea);box-shadow:0 2px 10px rgba(38,34,98,.05)}
+.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:8px;padding-bottom:8px}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;background:transparent;border:0;padding:10px 14px;border-radius:10px;font-weight:600;font-size:14px;color:var(--suave);white-space:nowrap}
+.tab[aria-selected=true]{background:var(--profundo);color:#fff}
+
+main section{padding:36px 0 12px}
+.panel[hidden]{display:none}
+.intro{max-width:720px;margin-bottom:22px}
+
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:20px;box-shadow:var(--sombra)}
+.card.click{cursor:pointer;text-align:left;width:100%;transition:border-color .15s,transform .15s}
+.card.click:hover{border-color:var(--azul);transform:translateY(-2px)}
+.ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e6f1ff;color:var(--azul);font-weight:800;font-size:18px;margin-bottom:12px}
+.num{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:999px;background:var(--azul);color:#fff;font-weight:800;font-size:14px;margin-right:10px;flex:0 0 auto}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#e6f1ff;color:var(--azul);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+
+/* Steps accordion */
+.step{background:#fff;border:1px solid var(--linea);border-radius:var(--r);margin-bottom:12px;overflow:hidden;box-shadow:var(--sombra)}
+.step>button{width:100%;display:flex;align-items:center;text-align:left;background:none;border:0;padding:18px 18px;gap:4px}
+.step>button h3{margin:0;flex:1}
+.step>button .sub{display:block;font-size:13px;color:var(--suave);font-weight:500;margin-top:2px}
+.chev{transition:transform .2s;color:var(--azul);font-weight:800;font-size:20px;margin-left:8px}
+.step.open .chev{transform:rotate(45deg)}
+.step .body{display:none;padding:0 18px 20px 58px}
+.step.open .body{display:block}
+.body ol,.body ul{padding-left:20px;color:var(--suave)}
+.body li{margin:6px 0}
+.body li b{color:var(--texto)}
+.via{background:var(--neutro);border-radius:12px;padding:14px 16px;margin:12px 0}
+.via h4{color:var(--profundo);font-size:15px;margin-bottom:6px}
+.note{border-left:4px solid var(--azul);background:#eef6ff;padding:12px 14px;border-radius:0 10px 10px 0;margin:14px 0;font-size:14px;color:var(--texto)}
+.note.warn{border-color:var(--profundo);background:#ecebf6}
+.inline-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:var(--profundo);color:#fff;border-radius:var(--r);padding:20px;margin:22px 0}
+.inline-cta p{color:#dfe8ff;margin:0}
+.inline-cta strong{display:block;color:#fff;font-size:17px;margin-bottom:2px}
+
+/* Checklist */
+.prog{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:16px 18px;margin-bottom:14px;position:sticky;top:62px;z-index:5;box-shadow:var(--sombra)}
+.prog-top{display:flex;justify-content:space-between;font-weight:700;color:var(--profundo);font-size:14px;margin-bottom:8px}
+.bar{height:10px;background:var(--neutro);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--azul);border-radius:999px;transition:width .3s}
+.chk{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;margin-bottom:8px;cursor:pointer}
+.chk input{appearance:none;flex:0 0 auto;width:24px;height:24px;border:2px solid #b9c3d6;border-radius:7px;margin-top:1px;display:grid;place-items:center;cursor:pointer}
+.chk input:checked{background:var(--azul);border-color:var(--azul)}
+.chk input:checked:after{content:"✓";color:#fff;font-weight:800;font-size:15px}
+.chk b{display:block;color:var(--texto);font-size:15px}
+.chk span{font-size:13.5px;color:var(--suave)}
+.chk .where{display:inline-block;margin-top:4px;font-size:11px;font-weight:700;color:var(--azul);background:#e6f1ff;padding:2px 8px;border-radius:6px}
+.group-title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin:22px 0 10px}
+.flags li{margin:8px 0}
+
+/* Glosario / FAQ */
+.term b{color:var(--profundo)}
+details{background:#fff;border:1px solid var(--linea);border-radius:12px;margin-bottom:8px;padding:0 16px}
+summary{list-style:none;cursor:pointer;font-weight:700;color:var(--profundo);padding:16px 26px 16px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:13px;color:var(--azul);font-size:22px;font-weight:800}
+details[open] summary:after{content:"–"}
+details p{padding-bottom:16px}
+
+/* Ruta */
+.ruta{position:relative;padding-left:4px}
+.hito{display:flex;gap:4px;margin-bottom:16px}
+.hito .card{flex:1;padding:16px 18px}
+.hito p{font-size:14.5px}
+
+/* Calculadoras */
+.calc label{display:block;font-size:13px;font-weight:600;color:var(--profundo);margin:12px 0 6px}
+.calc .inp{display:flex;align-items:center;border:1.5px solid var(--linea);border-radius:10px;background:#fff;overflow:hidden}
+.calc .inp span{padding:0 10px;color:var(--suave);font-weight:600;font-size:14px}
+.calc input{flex:1;min-width:0;border:0;padding:12px 10px;font:inherit;font-weight:600;color:var(--texto);background:transparent;outline:none}
+.calc .inp:focus-within{border-color:var(--azul)}
+.res{margin-top:16px;background:var(--profundo);color:#fff;border-radius:12px;padding:16px}
+.res .row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:4px 0;color:#cfe0ff}
+.res .row b{color:#fff}
+.res .big{font-size:26px;font-weight:800;color:#fff;margin-top:6px}
+.res .big small{display:block;font-size:12px;font-weight:600;color:#9fc8ff;letter-spacing:.06em;text-transform:uppercase}
+.fine{font-size:12px;color:var(--suave);margin-top:10px}
+
+/* Servicio */
+.serv h3{font-size:20px}
+.serv ul{list-style:none;margin:12px 0 18px}
+.serv li{padding:6px 0 6px 28px;position:relative;color:var(--suave)}
+.serv li:before{content:"✓";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:6px;background:#e6f1ff;color:var(--azul);font-weight:800;font-size:12px;display:grid;place-items:center}
+.serv.dark{background:var(--profundo);border-color:var(--profundo)}
+.serv.dark h3,.serv.dark .pill{color:#fff}
+.serv.dark .pill{background:rgba(255,255,255,.14)}
+.serv.dark p,.serv.dark li{color:#dfe8ff}
+.serv.dark li:before{background:var(--azul);color:#fff}
+.caso{background:linear-gradient(135deg,#fff 0%,#eef6ff 100%)}
+.caso .monto{font-size:40px;font-weight:800;color:var(--azul);letter-spacing:-.02em}
+.form label{display:block;font-size:13px;font-weight:600;color:var(--profundo);margin:12px 0 6px}
+.form input,.form select,.form textarea{width:100%;border:1.5px solid var(--linea);border-radius:10px;padding:12px;font:inherit;font-size:15px;color:var(--texto);background:#fff}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--azul);outline:none}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1.5px solid var(--linea);background:#fff;border-radius:999px;padding:9px 14px;font-weight:600;font-size:14px;color:var(--suave)}
+.opt[aria-pressed=true]{background:var(--azul);border-color:var(--azul);color:#fff}
+
+/* Footer + sticky */
+footer{background:var(--negro);color:#b9bcd0;padding:32px 0;margin-top:40px;font-size:14px}
+footer p{color:#b9bcd0}
+footer b{color:#fff}
+footer a{color:#6db3ff}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea);padding:10px 16px}
+.sticky .wrap{display:flex;align-items:center;gap:10px;padding:0}
+.sticky .txt{flex:1;font-size:13px;color:var(--suave);line-height:1.3}
+.sticky .txt b{display:block;color:var(--profundo);font-size:14px}
+.sticky .btn{padding:12px 16px;font-size:14px;white-space:nowrap}
+@media (max-width:560px){
+  .step .body{padding:0 16px 18px 16px}
+  .sticky .txt{display:none}
+  .sticky .btn{flex:1}
+  .top .mini{display:none}
+  .form .two{grid-template-columns:1fr}
+  .prog{top:58px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Asesor Peterson, inicio"><b>P</b><span>ASESOR PETERSON<small>Alguien que cuida tus intereses.</small></span></a>
+    <a class="mini" data-wa="Hola Peterson, vengo de la guía 'Encuentra al dueño' y quiero agendar mi primera asesoría." href="#">Agendar asesoría gratis</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Guía interactiva · Viña del Mar y Concón</span>
+    <h1>Cómo encontrar al <em>dueño</em> de una propiedad y comprar <em>seguro</em></h1>
+    <p class="lead">El paso a paso que uso con mis clientes: ROL, SII, Conservador de Bienes Raíces, checklist de compra segura y calculadoras para evaluar una oportunidad sin improvisar.</p>
+    <div class="cta-row">
+      <button class="btn btn-azul" data-go="dueno">Empezar la guía</button>
+      <a class="btn btn-linea" data-wa="Hola Peterson, quiero comprar o vender en Viña del Mar / Concón y me gustaría una primera asesoría." href="#">Hablar con Peterson</a>
+    </div>
+    <div class="trust">
+      <span><b>+200</b>personas asesoradas</span>
+      <span><b>+4</b>años en Viña y Concón</span>
+      <span><b>1ª</b>asesoría sin costo</span>
+    </div>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la guía">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-tab="inicio" aria-selected="true">Inicio</button>
+    <button class="tab" role="tab" data-tab="dueno" aria-selected="false">¿Quién es el dueño?</button>
+    <button class="tab" role="tab" data-tab="seguro" aria-selected="false">Comprar seguro</button>
+    <button class="tab" role="tab" data-tab="saber" aria-selected="false">Qué necesitas saber</button>
+    <button class="tab" role="tab" data-tab="como" aria-selected="false">Cómo hacerlo</button>
+    <button class="tab" role="tab" data-tab="servicio" aria-selected="false">Compra o vende en Viña</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- INICIO -->
+<section class="panel" id="inicio" role="tabpanel">
+  <div class="wrap">
+    <div class="intro">
+      <h2>¿Qué necesitas hoy?</h2>
+      <p>Elige tu camino. Todo está explicado en simple, como si te lo contara en un café.</p>
+    </div>
+    <div class="grid g3">
+      <button class="card click" data-go="dueno"><div class="ico">🔍</div><h3>Saber quién es el dueño</h3><p>4 pasos con ROL, SII, CBR y datos de contacto.</p></button>
+      <button class="card click" data-go="seguro"><div class="ico">🛡️</div><h3>Comprar sin riesgos</h3><p>Checklist interactivo de documentos y señales de alerta.</p></button>
+      <button class="card click" data-go="saber"><div class="ico">📘</div><h3>Entender los términos</h3><p>ROL, dominio vigente, gravámenes, posesión efectiva y más.</p></button>
+      <button class="card click" data-go="como"><div class="ico">🧭</div><h3>Evaluar una oportunidad</h3><p>La ruta completa y calculadoras de oferta y utilidad.</p></button>
+      <button class="card click" data-go="servicio"><div class="ico">🏡</div><h3>Comprar en Viña o Concón</h3><p>Personal Shopper Inmobiliario que trabaja 100% para ti.</p></button>
+      <button class="card click" data-go="servicio" data-intent="vender"><div class="ico">📈</div><h3>Vender tu propiedad</h3><p>Estrategia de precio, marketing y negociación con respaldo.</p></button>
+    </div>
+
+    <div class="card caso" style="margin-top:22px">
+      <span class="pill">Caso real</span>
+      <h3>Pedro vio una casa abandonada en su barrio</h3>
+      <p>Me contactó, le enseñé el proceso y lo acompañé paso a paso: investigó al propietario, hizo una oferta formal, consiguió un inversionista, gestionó la remodelación y vendimos la propiedad.</p>
+      <div class="monto">+$20 millones</div>
+      <p>fue su parte: el 20% de la utilidad neta, sin poner capital propio. <span style="font-size:13px">Cada caso es distinto y los resultados dependen del mercado, la propiedad y la ejecución.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- DUEÑO -->
+<section class="panel" id="dueno" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Formas de saber quién es el dueño</span>
+      <h2>Del domicilio al propietario, en 4 pasos</h2>
+      <p>Todo parte con la dirección exacta. Toca cada paso para ver el detalle.</p>
+    </div>
+
+    <div class="step open">
+      <button aria-expanded="true"><span class="num">1</span><h3>Obtén el ROL de la propiedad<span class="sub">La "cédula de identidad" del inmueble</span></h3><span class="chev">+</span></button>
+      <div class="body">
+        <p>El ROL es el número único que identifica cada propiedad en Chile (formato tipo <b>12345-6</b>). Sin él cuesta avanzar en la investigación legal. Tienes 3 formas de obtenerlo solo con la dirección:</p>
+        <div class="via"><h4>A · Avalúos.cl</h4><ol><li>Entra a <a href="https://www.avaluos.cl" target="_blank" rel="noopener">avaluos.cl</a>.</li><li>Elige <b>Búsqueda por dirección</b>.</li><li>Ingresa región, comuna, calle y número.</li><li>Verás el ROL en pantalla.</li></ol></div>
+        <div class="via"><h4>B · SII (Servicio de Impuestos Internos)</h4><ol><li>Entra a <a href="https://www.sii.cl" target="_blank" rel="noopener">sii.cl</a> → <b>Servicios online</b>.</li><li>Ve a <b>Avalúos y contribuciones</b> (ícono de casa 🏠).</li><li>Abre <b>Consulta de avalúos y certificados</b>.</li><li>Elige <b>Consulta de bienes raíces por dirección</b> o <b>Consulta de certificados</b>.</li><li>Ingresa región, comuna, calle y número exacto → <b>Consultar</b>.</li><li>Anota el ROL tal cual aparece.</li></ol></div>
+        <div class="via"><h4>C · TGR (Tesorería General de la República)</h4><ol><li>Entra a <a href="https://www.tgr.cl" target="_blank" rel="noopener">tgr.cl</a>.</li><li>Ve a <b>Pago de contribuciones</b> → búsqueda por dirección.</li><li>Verás el ROL asociado al inmueble.</li></ol></div>
+        <div class="note">📝 Anota siempre dirección exacta, comuna y región. Si la casa no tiene número visible, usa Google Maps y toma como referencia el número de la casa más cercana. Los sitios oficiales cambian sus menús con el tiempo: si no ves una opción, usa el buscador del propio sitio.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <button aria-expanded="false"><span class="num">2</span><h3>Averigua el nombre del dueño en el SII<span class="sub">Con el ROL en mano</span></h3><span class="chev">+</span></button>
+      <div class="body">
+        <p>Piensa en el ROL como el número de una casa en el "cuaderno del Gobierno". Con él puedes consultar quién figura como propietario.</p>
+        <ol><li>Entra a <a href="https://www.sii.cl" target="_blank" rel="noopener">sii.cl</a> → <b>Servicios online</b>.</li><li>Ve a <b>Avalúos y contribuciones</b>.</li><li>Haz clic en <b>Consulta por Bien Raíz</b>.</li><li>Ingresa región, comuna (ej: Viña del Mar, Concón) y el ROL.</li><li>Presiona <b>Consultar</b>.</li></ol>
+        <div class="note">🎯 Según lo que muestre el servicio, verás la ficha del bien raíz y, cuando está disponible, el nombre del propietario registrado (normalmente sin RUT ni contacto). Anótalo: lo confirmarás en el paso 3.</div>
+        <div class="note warn">⚠️ Si no aparece nada: revisa ROL y comuna. Puede haber un error de inscripción o del sistema; prueba otro navegador u horario. El SII es referencial: <b>el dueño legal lo acredita el Conservador</b>.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <button aria-expanded="false"><span class="num">3</span><h3>Confírmalo con el Certificado de Dominio Vigente<span class="sub">Conservador de Bienes Raíces (CBR)</span></h3><span class="chev">+</span></button>
+      <div class="body">
+        <p>Es el documento oficial que acredita quién es el dueño legal. Es la forma confiable de saber si la persona que aparece en el SII realmente es la propietaria.</p>
+        <div class="via"><h4>Online (más rápido)</h4><ul><li>CBR Viña del Mar: <a href="https://www.cbrvina.cl" target="_blank" rel="noopener">cbrvina.cl</a></li><li>CBR Santiago: <a href="https://www.cbrsantiago.cl" target="_blank" rel="noopener">cbrsantiago.cl</a></li><li>Otras comunas: busca "Conservador de Bienes Raíces + comuna".</li></ul></div>
+        <div class="via"><h4>Presencial</h4><p>Ve a la oficina del CBR que corresponde a la comuna con la dirección o el ROL y pide el <b>Certificado de Dominio Vigente</b>.</p></div>
+        <div class="note">💰 Valor referencial: entre $3.500 y $6.000 según el Conservador. Revisa el arancel vigente en su sitio.</div>
+        <div class="note">💡 Pide también el <b>Certificado de Hipotecas, Gravámenes, Interdicciones y Prohibiciones</b>: te dice si la propiedad tiene deudas o impedimentos para venderse.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <button aria-expanded="false"><span class="num">4</span><h3>Consigue un medio de contacto<span class="sub">Informe profesional o vías directas</span></h3><span class="chev">+</span></button>
+      <div class="body">
+        <div class="via"><h4>A · Informe en DealerNET</h4><p>Plataforma chilena que entrega informes de personas y propiedades (teléfonos, correos, dirección, estado comercial o judicial).</p><ol><li>Ingresa al sitio oficial de DealerNET y crea una cuenta.</li><li>Elige <b>informe de persona</b> o <b>informe de propiedad</b>.</li><li>Completa nombre del dueño o ROL + comuna.</li><li>Paga y descarga el informe desde tu cuenta.</li></ol></div>
+        <div class="via"><h4>B · Vías directas y respetuosas</h4><ul><li>Letrero de "se vende" o "se arrienda" en la propiedad.</li><li>Administración o conserjería (si es condominio o edificio): pide que le hagan llegar tu mensaje.</li><li>Vecinos o junta de vecinos: a veces conocen a la familia o a los herederos.</li><li>Una carta dirigida al propietario a la dirección del inmueble.</li></ul></div>
+        <div class="note warn">🤝 Usa los datos personales solo para una propuesta seria, preséntate con nombre y propósito, y si la persona no quiere vender, respeta su decisión. <b>Nunca entres a una propiedad sin permiso.</b></div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <div><strong>¿Prefieres que lo investigue por ti?</strong><p>Hago el estudio de la propiedad y te digo si vale la pena avanzar.</p></div>
+      <a class="btn btn-azul" data-wa="Hola Peterson, encontré una propiedad y quiero que me ayudes a investigar al dueño y ver si vale la pena. La dirección es: " href="#">Pedir estudio por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPRAR SEGURO -->
+<section class="panel" id="seguro" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Comprar seguro</span>
+      <h2>Checklist antes de firmar</h2>
+      <p>Marca lo que ya revisaste. Tu avance queda guardado en este navegador.</p>
+    </div>
+    <div class="prog"><div class="prog-top"><span>Tu avance</span><span id="progTxt">0 de 0</span></div><div class="bar"><i id="progBar"></i></div></div>
+    <div id="checklist"></div>
+
+    <div class="card" style="margin-top:18px">
+      <h3>🚩 Señales de alerta</h3>
+      <ul class="flags" style="padding-left:20px;color:var(--suave)">
+        <li>Te piden dinero o transferencias <b>antes</b> de una promesa firmada en notaría.</li>
+        <li>El vendedor no es la persona que figura en el dominio vigente y no tiene poder notarial.</li>
+        <li>Herencia sin <b>posesión efectiva</b> inscrita.</li>
+        <li>Precio muy por debajo del mercado con apuro excesivo por cerrar.</li>
+        <li>Se niegan a mostrar documentos o a que un abogado revise los títulos.</li>
+        <li>Ampliaciones sin permiso ni recepción municipal.</li>
+      </ul>
+    </div>
+
+    <div class="inline-cta">
+      <div><strong>Revisemos juntos tu compra</strong><p>Como Personal Shopper Inmobiliario trabajo 100% para el comprador en Viña del Mar y Concón.</p></div>
+      <a class="btn btn-azul" data-wa="Hola Peterson, estoy por comprar una propiedad y quiero que revisemos juntos que sea una compra segura." href="#">Quiero comprar seguro</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ NECESITAS SABER -->
+<section class="panel" id="saber" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Qué necesitas saber</span>
+      <h2>Los términos, sin enredos</h2>
+      <p>Lo mínimo para entender cualquier conversación con un corredor, un abogado o una notaría.</p>
+    </div>
+    <div class="grid g2" id="glosario"></div>
+
+    <h2 style="margin-top:32px">Preguntas frecuentes</h2>
+    <div id="faq" style="margin-top:12px"></div>
+
+    <div class="inline-cta">
+      <div><strong>¿Te quedó alguna duda?</strong><p>Escríbeme y te respondo en simple.</p></div>
+      <a class="btn btn-azul" data-wa="Hola Peterson, leí tu guía y tengo una duda: " href="#">Preguntar a Peterson</a>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO HACERLO -->
+<section class="panel" id="como" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Cómo tienes que hacerlo</span>
+      <h2>La ruta completa de una oportunidad</h2>
+      <p>El modelo que aplicó Pedro: encontrar la propiedad, estructurar con un inversionista, remodelar y vender. Con ética y todo por escrito.</p>
+    </div>
+    <div class="ruta" id="ruta"></div>
+
+    <h2 style="margin-top:30px">Calculadoras</h2>
+    <p style="margin-bottom:14px">Números referenciales para ordenar tu análisis. No reemplazan una tasación ni un estudio de mercado.</p>
+    <div class="grid g2">
+      <div class="card calc">
+        <h3>¿Cuánto ofrecer como máximo?</h3>
+        <p style="font-size:14px">Tu oferta sale del valor final, no del precio que pide el dueño.</p>
+        <label for="c_venta">Valor de venta estimado después de remodelar</label>
+        <div class="inp"><span>$</span><input id="c_venta" inputmode="numeric" value="80.000.000"></div>
+        <label for="c_remo">Costo de remodelación</label>
+        <div class="inp"><span>$</span><input id="c_remo" inputmode="numeric" value="15.000.000"></div>
+        <label for="c_cost">Otros costos (notaría, corretaje, impuestos, etc.)</label>
+        <div class="inp"><input id="c_cost" inputmode="decimal" value="4"><span>% del valor de venta</span></div>
+        <label for="c_marg">Margen mínimo que quieres dejar</label>
+        <div class="inp"><input id="c_marg" inputmode="decimal" value="15"><span>% del valor de venta</span></div>
+        <div class="res">
+          <div class="row"><span>Techo (sin ganancia)</span><b id="r_techo">—</b></div>
+          <div class="big"><small>Oferta máxima recomendada</small><span id="r_oferta">—</span></div>
+        </div>
+        <p class="fine">Ejemplo de la guía: si se vende en $80 MM y remodelar cuesta $15 MM, pagar más de $55 MM deja sin ganancia a todos.</p>
+      </div>
+
+      <div class="card calc">
+        <h3>¿Cuánto ganarías con el 20%?</h3>
+        <p style="font-size:14px">Tú aportas gestión; el inversionista aporta el capital.</p>
+        <label for="u_venta">Precio de venta final</label>
+        <div class="inp"><span>$</span><input id="u_venta" inputmode="numeric" value="80.000.000"></div>
+        <label for="u_compra">Precio de compra</label>
+        <div class="inp"><span>$</span><input id="u_compra" inputmode="numeric" value="50.000.000"></div>
+        <label for="u_remo">Remodelación</label>
+        <div class="inp"><span>$</span><input id="u_remo" inputmode="numeric" value="15.000.000"></div>
+        <label for="u_otros">Otros costos (notaría, corretaje, etc.)</label>
+        <div class="inp"><span>$</span><input id="u_otros" inputmode="numeric" value="3.200.000"></div>
+        <label for="u_pct">Tu participación</label>
+        <div class="inp"><input id="u_pct" inputmode="decimal" value="20"><span>% de la utilidad neta</span></div>
+        <div class="res">
+          <div class="row"><span>Utilidad neta</span><b id="r_util">—</b></div>
+          <div class="row"><span>Para el inversionista</span><b id="r_inv">—</b></div>
+          <div class="big"><small>Tu ganancia</small><span id="r_tuya">—</span></div>
+        </div>
+        <p class="fine">Deja el porcentaje y las condiciones por escrito en notaría antes de empezar.</p>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <div><strong>¿Tienes una propiedad en la mira?</strong><p>Evaluamos juntos los números y, cuando esté lista, la vendemos con estrategia en Viña del Mar.</p></div>
+      <a class="btn btn-azul" data-wa="Hola Peterson, tengo una propiedad con potencial y quiero evaluar los números contigo." href="#">Evaluar mi oportunidad</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIO -->
+<section class="panel" id="servicio" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="intro">
+      <span class="pill">Compra o vende en Viña del Mar y Concón</span>
+      <h2>No vendo propiedades al azar. Ayudo a comprar mejor.</h2>
+      <p>Soy Peterson Laguerre, asesor inmobiliario y fundador de AVA7 Propiedades. Mi trabajo no es venderte una propiedad: es que tomes la mejor decisión, con datos reales y acompañamiento completo.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card serv dark">
+        <span class="pill">Para compradores</span>
+        <h3>Personal Shopper Inmobiliario</h3>
+        <p>Trabajo 100% para ti, no para quien vende.</p>
+        <ul>
+          <li>Primera asesoría sin costo en Viña del Mar y Concón (valor referencial $39.990; si continúas, se descuenta de los honorarios).</li>
+          <li>Analizamos tu situación y te digo qué puedes comprar.</li>
+          <li>Contrato de prestación de servicios claro.</li>
+          <li>Te presento entre 5 y 10 opciones filtradas para ti.</li>
+          <li>Tú eliges qué visitar. Yo me encargo del resto: estudio, negociación y cierre.</li>
+        </ul>
+        <button class="btn btn-azul" data-intent-btn="comprar">Quiero comprar</button>
+      </div>
+      <div class="card serv">
+        <span class="pill">Para propietarios</span>
+        <h3>Vende tu propiedad en Viña</h3>
+        <p>Venta con estrategia, junto a AVA7 Propiedades.</p>
+        <ul>
+          <li>Estrategia de precio basada en datos del sector.</li>
+          <li>Campañas publicitarias y contenido profesional (fotos y video).</li>
+          <li>Filtro de compradores reales antes de cada visita.</li>
+          <li>Negociación clara y acompañamiento hasta la firma.</li>
+          <li>Documentos revisados antes de publicar para evitar sorpresas.</li>
+        </ul>
+        <button class="btn btn-prof" data-intent-btn="vender">Quiero vender</button>
+      </div>
+    </div>
+
+    <div class="card form" id="formulario" style="margin-top:22px">
+      <h3>Cuéntame tu caso</h3>
+      <p style="font-size:14px">Se abrirá WhatsApp con tu mensaje listo. No guardamos tus datos en esta página.</p>
+      <label>¿Qué quieres hacer?</label>
+      <div class="opts" id="f_obj">
+        <button type="button" class="opt" aria-pressed="true" data-v="comprar">Comprar</button>
+        <button type="button" class="opt" aria-pressed="false" data-v="vender">Vender</button>
+        <button type="button" class="opt" aria-pressed="false" data-v="invertir">Invertir</button>
+        <button type="button" class="opt" aria-pressed="false" data-v="evaluar una propiedad abandonada">Evaluar una oportunidad</button>
+      </div>
+      <div class="two">
+        <div><label for="f_nom">Tu nombre</label><input id="f_nom" autocomplete="given-name" placeholder="Ej: Camila"></div>
+        <div><label for="f_zona">Comuna o sector</label><input id="f_zona" placeholder="Ej: Reñaca, Concón, Recreo"></div>
+      </div>
+      <div class="two">
+        <div><label for="f_pres" id="f_pres_l">Presupuesto aproximado</label><input id="f_pres" placeholder="Ej: 4.500 UF"></div>
+        <div><label for="f_plazo">¿Para cuándo?</label>
+          <select id="f_plazo"><option>Lo antes posible</option><option>En 1 a 3 meses</option><option>En 3 a 6 meses</option><option>Solo estoy explorando</option></select></div>
+      </div>
+      <label for="f_msg">Algo más que deba saber (opcional)</label>
+      <textarea id="f_msg" rows="3" placeholder="Ej: busco 2D2B cerca del metro, con estacionamiento"></textarea>
+      <button class="btn btn-azul" id="f_send" style="margin-top:16px;width:100%">Enviar por WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Peterson Laguerre</b> · Asesor Inmobiliario · Fundador de AVA7 Propiedades</p>
+    <p>Viña del Mar, Concón y asesorías online · WhatsApp <a data-wa="Hola Peterson" href="#">+56 9 9482 8698</a> · Instagram <a href="https://instagram.com/asesorpeterson" target="_blank" rel="noopener">@asesorpeterson</a> · <a href="https://www.ava7propiedades.cl" target="_blank" rel="noopener">ava7propiedades.cl</a></p>
+    <p style="margin-top:12px;font-size:12px">Esta guía es educativa y no reemplaza la asesoría legal de un abogado. Los valores y menús de sitios oficiales pueden cambiar. Método 100% legal: no te da derecho a ocupar propiedades ajenas. Trabaja con ética.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <div class="wrap">
+    <div class="txt"><b>¿Compras o vendes en Viña del Mar?</b>Primera asesoría sin costo con Peterson.</div>
+    <a class="btn btn-azul" data-wa="Hola Peterson, vengo de tu guía y quiero agendar mi primera asesoría sin costo." href="#">💬 Hablar por WhatsApp</a>
+  </div>
+</div>
+
+<script type="application/ld+json" id="ldjson"></script>
+<script>
+(function(){
+  var WA = "56994828698";
+  function waLink(t){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(t); }
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = waLink(a.getAttribute("data-wa")); a.target = "_blank"; a.rel = "noopener";
+  });
+
+  // Tabs
+  var tabs = document.querySelectorAll(".tab");
+  function go(id, scroll){
+    tabs.forEach(function(t){ t.setAttribute("aria-selected", t.dataset.tab === id ? "true" : "false"); });
+    document.querySelectorAll(".panel").forEach(function(p){ p.hidden = p.id !== id; });
+    var sel = document.querySelector('.tab[data-tab="'+id+'"]'); if(sel) sel.scrollIntoView({block:"nearest",inline:"center"});
+    if(scroll !== false){ var nav = document.querySelector(".tabs"); window.scrollTo({top: nav.offsetTop, behavior:"smooth"}); }
+    if(history.replaceState) history.replaceState(null, "", "#" + id);
+  }
+  tabs.forEach(function(t){ t.addEventListener("click", function(){ go(t.dataset.tab); }); });
+  document.querySelectorAll("[data-go]").forEach(function(b){
+    b.addEventListener("click", function(){ go(b.dataset.go); if(b.dataset.intent) setObj(b.dataset.intent); });
+  });
+  var h = location.hash.replace("#",""); if(h && document.getElementById(h) && document.getElementById(h).classList.contains("panel")) go(h, false);
+
+  // Accordion
+  document.querySelectorAll(".step > button").forEach(function(b){
+    b.addEventListener("click", function(){ var s=b.parentElement; s.classList.toggle("open"); b.setAttribute("aria-expanded", s.classList.contains("open")); });
+  });
+
+  // Checklist
+  var CHK = [
+    ["Identidad y dominio", [
+      ["dom","Certificado de Dominio Vigente","El vendedor debe ser quien figura como dueño en el CBR.","CBR"],
+      ["gp","Hipotecas, gravámenes, interdicciones y prohibiciones","Confirma que no haya deudas, embargos ni impedimentos para vender.","CBR"],
+      ["id","Identidad del vendedor y estado civil","Cédula vigente; si está casado, revisa el régimen y si necesita autorización del cónyuge.","Notaría / Abogado"],
+      ["pe","Posesión efectiva (si es herencia)","Debe estar inscrita y todos los herederos deben concurrir a la venta.","Registro Civil / CBR"],
+      ["poder","Poder notarial vigente (si vende un representante)","Verifica que el poder permita vender y esté vigente.","Notaría"]
+    ]],
+    ["Deudas y municipio", [
+      ["contr","Contribuciones al día","Revisa si hay deudas de contribuciones asociadas al ROL.","TGR"],
+      ["aval","Certificado de avalúo fiscal","Te sirve para impuestos, gastos y como referencia.","SII"],
+      ["gc","Gastos comunes al día","Si es departamento o condominio, pide certificado a la administración.","Administración"],
+      ["rec","Recepción final y certificado de número","Confirma que lo construido esté regularizado.","Dirección de Obras Municipales"],
+      ["serv","Cuentas de servicios básicos pagadas","Luz, agua y gas sin deudas pendientes.","Empresas de servicio"]
+    ]],
+    ["Estado y cierre", [
+      ["vis","Visita técnica","Humedad, filtraciones, instalaciones eléctricas y de gas, grietas.","Inspector / Maestro"],
+      ["tit","Estudio de títulos por un abogado","Revisión legal de la historia de la propiedad.","Abogado / Banco"],
+      ["prom","Promesa de compraventa en notaría","Con plazos, condiciones y multas claras. Nunca pagues sin esto.","Notaría"],
+      ["esc","Escritura e inscripción a tu nombre","La compra termina cuando la propiedad queda inscrita a tu nombre en el CBR.","Notaría / CBR"]
+    ]]
+  ];
+  var KEY="ap_checklist_v1", state={};
+  try{ state = JSON.parse(localStorage.getItem(KEY) || "{}"); }catch(e){ state={}; }
+  var box = document.getElementById("checklist"), total=0, html="";
+  CHK.forEach(function(g){
+    html += '<div class="group-title">'+g[0]+'</div>';
+    g[1].forEach(function(it){ total++;
+      html += '<label class="chk"><input type="checkbox" data-k="'+it[0]+'"'+(state[it[0]]?" checked":"")+'><div><b>'+it[1]+'</b><span>'+it[2]+'</span><br><em class="where">'+it[3]+'</em></div></label>';
+    });
+  });
+  box.innerHTML = html;
+  function prog(){
+    var n = box.querySelectorAll("input:checked").length;
+    document.getElementById("progTxt").textContent = n+" de "+total+(n===total?" · ¡Listo para firmar con respaldo!":"");
+    document.getElementById("progBar").style.width = (n/total*100)+"%";
+  }
+  box.addEventListener("change", function(e){
+    if(e.target.dataset.k){ state[e.target.dataset.k]=e.target.checked; try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(err){} prog(); }
+  });
+  prog();
+
+  // Glosario
+  var GL = [
+    ["ROL","Número único que identifica una propiedad ante el SII. Es su \"cédula\"."],
+    ["Avalúo fiscal","Valor que el SII asigna a la propiedad para calcular contribuciones. No es el precio de mercado."],
+    ["Contribuciones","Impuesto territorial que se paga a la TGR según el avalúo fiscal."],
+    ["Dominio vigente","Certificado del CBR que acredita quién es hoy el dueño legal."],
+    ["Hipoteca","Garantía sobre la propiedad, normalmente por un crédito bancario."],
+    ["Prohibición / embargo","Restricción inscrita que impide o limita vender la propiedad."],
+    ["Posesión efectiva","Trámite que reconoce a los herederos de una persona fallecida."],
+    ["Promesa de compraventa","Contrato previo donde las partes se obligan a firmar la compraventa en un plazo y condiciones."],
+    ["Estudio de títulos","Revisión legal de la historia de la propiedad hecha por un abogado."],
+    ["Recepción final","Certificado municipal que confirma que la construcción cumple con el permiso."],
+    ["Utilidad neta","Precio de venta menos compra, remodelación y todos los costos."],
+    ["Estudio de mercado","Comparación de propiedades similares en la zona: precio, m², estado, arriendo."]
+  ];
+  document.getElementById("glosario").innerHTML = GL.map(function(t){ return '<div class="card term"><h3>'+t[0]+'</h3><p>'+t[1]+'</p></div>'; }).join("");
+
+  // FAQ
+  var FAQ = [
+    ["¿Es legal averiguar quién es el dueño de una propiedad?","Sí. El ROL, el avalúo y el dominio se consultan en registros públicos (SII, TGR y Conservador de Bienes Raíces). Lo importante es usar la información con respeto y para una propuesta seria."],
+    ["¿El SII me asegura quién es el dueño?","No. El SII es una referencia. El documento que acredita al dueño legal es el Certificado de Dominio Vigente del Conservador de Bienes Raíces."],
+    ["¿Puedo entrar a una casa abandonada para verla?","No. Nunca entres sin permiso del propietario. Tampoco ocupes, falsifiques documentos ni inventes historias. Este método es legal y ético."],
+    ["¿Qué pasa si el dueño falleció?","Los herederos deben tener la posesión efectiva inscrita para poder vender. Conviene que un abogado revise el caso."],
+    ["¿Puedo invertir sin tener capital?","Es posible estructurarlo con un inversionista que aporta el dinero mientras tú gestionas, con un contrato en notaría que fije tu porcentaje. Requiere números claros y trabajo serio; no hay ganancia asegurada."],
+    ["¿Cuánto cuesta la primera asesoría con Peterson?","Es sin costo para quienes compran en Viña del Mar o Concón. El valor referencial es $39.990 y, si decides continuar, se descuenta de los honorarios finales."],
+    ["¿Me ayudas a vender mi propiedad en Viña del Mar?","Sí. Junto a AVA7 Propiedades trabajamos estrategia de precio, marketing profesional, filtro de compradores y negociación hasta la firma."]
+  ];
+  document.getElementById("faq").innerHTML = FAQ.map(function(f){ return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'; }).join("");
+  document.getElementById("ldjson").textContent = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":FAQ.map(function(f){return {"@type":"Question","name":f[0],"acceptedAnswer":{"@type":"Answer","text":f[1]}};})});
+
+  // Ruta
+  var RUTA = [
+    ["Encuentra la propiedad","Una casa olvidada, heredada o con dueño ausente puede ser una oportunidad si sabes mirarla con visión estratégica."],
+    ["Investiga al dueño","ROL → SII → Certificado de Dominio Vigente → datos de contacto. (Ver pestaña \"¿Quién es el dueño?\")"],
+    ["Haz un estudio de mercado","Compara precios de venta y arriendo, estado y m² de propiedades similares en la misma zona."],
+    ["Define la estrategia","¿Cuánto vale hoy? ¿Cuánto cuesta remodelar? ¿A cuánto se vende después? Calcula un margen claro y real."],
+    ["Busca un inversionista","Preséntale números claros y todo avanzado: dueño identificado, plan hecho y tu compromiso de gestión."],
+    ["Oferta y firma en notaría","Oferta con base en tu estudio. El inversionista compra a su nombre y tú firmas un contrato aparte con tu % de la utilidad neta, redactado por un abogado."],
+    ["Remodela y prepara","Presupuesto y plazos claros con un contratista de confianza, limpieza, staging, fotos profesionales y documentos listos."],
+    ["Vende con un corredor profesional","Con AVA7 Propiedades: campaña estratégica, filtro de clientes reales, presentación profesional y negociación clara."],
+    ["Cobra tu parte","Venta − compra − remodelación − costos = utilidad neta. Tu porcentaje acordado sale de ahí."]
+  ];
+  document.getElementById("ruta").innerHTML = RUTA.map(function(r,i){ return '<div class="hito"><span class="num">'+(i+1)+'</span><div class="card"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div></div>'; }).join("");
+
+  // Calculadoras
+  var fmt = new Intl.NumberFormat("es-CL");
+  function num(id){ var v=document.getElementById(id).value.replace(/\./g,"").replace(",", "."); var n=parseFloat(v); return isNaN(n)?0:n; }
+  function clp(n){ return (n<0?"−$":"$")+fmt.format(Math.round(Math.abs(n))); }
+  function calc(){
+    var v=num("c_venta"), r=num("c_remo"), c=num("c_cost")/100*v, m=num("c_marg")/100*v;
+    var techo=v-r-c, of=techo-m;
+    document.getElementById("r_techo").textContent = clp(techo);
+    document.getElementById("r_oferta").textContent = of>0?clp(of):"No conviene";
+    var util = num("u_venta")-num("u_compra")-num("u_remo")-num("u_otros"), p=num("u_pct")/100;
+    document.getElementById("r_util").textContent = clp(util);
+    document.getElementById("r_inv").textContent = util>0?clp(util*(1-p)):"—";
+    document.getElementById("r_tuya").textContent = util>0?clp(util*p):"Sin utilidad";
+  }
+  document.querySelectorAll(".calc input").forEach(function(i){
+    i.addEventListener("input", function(){
+      if(i.inputMode==="numeric"){ var d=i.value.replace(/\D/g,""); i.value = d?fmt.format(+d):""; }
+      calc();
+    });
+  });
+  calc();
+
+  // Formulario
+  var obj="comprar";
+  function setObj(v){
+    obj=v;
+    document.querySelectorAll("#f_obj .opt").forEach(function(o){ o.setAttribute("aria-pressed", o.dataset.v===v?"true":"false"); });
+    document.getElementById("f_pres_l").textContent = v==="vender" ? "Valor que esperas (aprox.)" : "Presupuesto aproximado";
+  }
+  document.querySelectorAll("#f_obj .opt").forEach(function(o){ o.addEventListener("click", function(){ setObj(o.dataset.v); }); });
+  document.querySelectorAll("[data-intent-btn]").forEach(function(b){
+    b.addEventListener("click", function(){ setObj(b.dataset.intentBtn); document.getElementById("formulario").scrollIntoView({behavior:"smooth",block:"start"}); });
+  });
+  document.getElementById("f_send").addEventListener("click", function(){
+    var g=function(id){ return document.getElementById(id).value.trim(); };
+    var t = "Hola Peterson"+(g("f_nom")?", soy "+g("f_nom"):"")+". Vengo de tu guía \"Encuentra al dueño\".\n"
+      + "• Quiero: "+obj+"\n"
+      + (g("f_zona")?"• Sector: "+g("f_zona")+"\n":"")
+      + (g("f_pres")?"• "+(obj==="vender"?"Valor esperado":"Presupuesto")+": "+g("f_pres")+"\n":"")
+      + "• Plazo: "+g("f_plazo")+"\n"
+      + (g("f_msg")?"• Detalle: "+g("f_msg")+"\n":"")
+      + "¿Podemos agendar la primera asesoría?";
+    window.open(waLink(t), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>
